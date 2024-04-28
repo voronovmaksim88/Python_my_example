@@ -1,11 +1,11 @@
-# примеры функция
+# примеры функций
 
 def func_summarize(x, y):
     #  func_summarize - имя функции
     #  x, y - параметры функции
     # от двоеточия до return - тело функции
     summa = x + y
-    print(x, "+", y, "=", summa)
+    print(f"{x}+{y}={summa}")
     return summa  # функция возвращает сумму аргументов
 
 
@@ -32,6 +32,6 @@ func_dictionary(name="Ivan", age="123")
 var_sum = func_summarize  # назначаем переменной функцию
 var_sum(3, 4)
 
-# присваиваем переменной результат  выполнения функции
+# присваиваем переменной результат выполнения функции
 var_sum2 = func_summarize(10, 20)
 print(var_sum2)

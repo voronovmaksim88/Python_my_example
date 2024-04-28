@@ -1,7 +1,7 @@
 # end = ''  это для того чтоб не переходить на новую строку
 
 print("for")
-# цикл For для того чтоб пройтись по массиву
+# цикл For, для того чтоб пройтись по массиву
 text = "abcdef"
 for i in text:
     print(i.upper(), end='')
@@ -25,7 +25,7 @@ for i in text:
 
 print("")
 print("")
-# цикл For для того чтоб пройтись словарю
+# цикл For, для того чтоб пройтись словарю
 my_PLC = {"Manufacturer": "Zentec", "Model": "M245", "Price": 10000}
 for item in my_PLC.items():
     key, value = item

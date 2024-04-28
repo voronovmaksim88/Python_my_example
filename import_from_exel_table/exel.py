@@ -1,11 +1,9 @@
-
 # в этом примере считаем данные из талицы exel
-
 import pandas as pd
-
+import xlrd
 # xlrd is a library for reading data and formatting information from Excel files in the historical .xls format.
 
-df = pd.read_excel('D:\YandexDisk\db\Manufacturers.xls')
+df = pd.read_excel(r'Manufacturers.xls')
 
 # Получение значения из конкретной ячейки по числовому индексу
 
@@ -24,12 +22,10 @@ print(value)
 value = df.iloc[0, 2]
 print(value)
 
-
-
-
 # второй способ код ниже работает !!!
-import xlrd
-book = xlrd.open_workbook("D:\YandexDisk\db\Manufacturers.xls")
+# import xlrd
+print()
+book = xlrd.open_workbook(r"Manufacturers.xls")
 print("The number of worksheets is {0}".format(book.nsheets))
 print("Worksheet name(s): {0}".format(book.sheet_names()))
 sh = book.sheet_by_index(0)

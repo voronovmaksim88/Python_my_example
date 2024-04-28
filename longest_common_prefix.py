@@ -17,5 +17,5 @@ def longest_common_prefix(strings):
 
 
 # Пример использования
-my_strings = ["ваhп", "ваhт", "ваhл"]
-print(longest_common_prefix(my_strings))  # Выведет: "ваh"
+my_strings = ["варп", "варт", "варл"]
+print(longest_common_prefix(my_strings))  # Выведет: "вар"

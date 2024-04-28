@@ -43,7 +43,7 @@ class SimpleVectorPaintApp:
 
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = SimpleVectorPaintApp(root)
-    root.title("Простой векторный графический редактор")
-    root.mainloop()
+    my_root = tk.Tk()
+    app = SimpleVectorPaintApp(my_root)
+    my_root.title("Простой векторный графический редактор")
+    my_root.mainloop()

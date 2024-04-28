@@ -31,7 +31,7 @@ class SimplePaintApp:
 
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = SimplePaintApp(root)
-    root.title("Простой графический редактор")
-    root.mainloop()
+    my_root = tk.Tk()
+    app = SimplePaintApp(my_root)
+    my_root.title("Простой графический редактор")
+    my_root.mainloop()

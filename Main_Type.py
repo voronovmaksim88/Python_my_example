@@ -1,5 +1,5 @@
 # ОСНОВНЫЕ ТИПЫ
-My_ = "text"  # строка
+My_str = "text"  # строка
 My_int = 123  # целое число
 My_bool = True  # логический тип
 My_list = [1, 2, 3, True, 'text']  # список
