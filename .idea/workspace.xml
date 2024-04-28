@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c12cb45-b5f3-4c76-a68a-fd5953bd1315" name="Changes" comment="добавил проектов">
+    <list default="true" id="7c12cb45-b5f3-4c76-a68a-fd5953bd1315" name="Changes" comment="обновил чутка">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all_any.py" beforeDir="false" afterPath="$PROJECT_DIR$/all_any.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assert.py" beforeDir="false" afterPath="$PROJECT_DIR$/assert.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class.py" beforeDir="false" afterPath="$PROJECT_DIR$/class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decorator_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorator_v1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decorator_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorator_v2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +30,12 @@
     &quot;assignee&quot;: &quot;voronovmaksim88&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/voronovmaksim88/Python_my_example.git",
-    "accountId": "01f9b3d4-4492-40be-b1ed-b0d7a8628ed0"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/voronovmaksim88/Python_my_example.git&quot;,
+    &quot;accountId&quot;: &quot;01f9b3d4-4492-40be-b1ed-b0d7a8628ed0&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -59,6 +58,8 @@
     "Python.all_any.executor": "Run",
     "Python.assert.executor": "Run",
     "Python.class.executor": "Run",
+    "Python.decorator_v1.executor": "Run",
+    "Python.decorator_v2.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -134,7 +135,8 @@
       <workItem from="1712572299132" duration="286000" />
       <workItem from="1712743693388" duration="54000" />
       <workItem from="1712747511274" duration="70000" />
-      <workItem from="1714281067789" duration="832000" />
+      <workItem from="1714281067789" duration="1375000" />
+      <workItem from="1714310477434" duration="1816000" />
     </task>
     <task id="LOCAL-00001" summary="мелкие правки">
       <option name="closed" value="true" />
@@ -152,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714281365255</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="обновил чутка">
+      <option name="closed" value="true" />
+      <created>1714282436987</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714282436987</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,24 +182,27 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="мелкие правки" />
     <MESSAGE value="добавил проектов" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил проектов" />
+    <MESSAGE value="обновил чутка" />
+    <option name="LAST_COMMIT_MESSAGE" value="обновил чутка" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SQLlite_test_v1r1_py$Flet_my_example_v1r1.coverage" NAME="Flet_my_example_v1r1 Coverage Results" MODIFIED="1711199426301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SQLlite_test_v1r1_py$PyQt_my_example_v1r1.coverage" NAME="PyQt_my_example_v1r1 Coverage Results" MODIFIED="1711234828484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SQLlite_test_v1r1_py$SQLlite_test_v1r1.coverage" NAME="SQLlite_test_v1r1 Coverage Results" MODIFIED="1709776864576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataBase_SQLlite_test_people" />
+    <SUITE FILE_PATH="coverage/Flet_my_example_v1r1_py$decorator_v2.coverage" NAME="decorator_v2 Coverage Results" MODIFIED="1714312027194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test_visio_r1_py$PyQt_my_example_v1r1.coverage" NAME="PyQt_my_example_v1r1 Coverage Results" MODIFIED="1712572489379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PyQt_my_example_v1r1_py$PySide6_example.coverage" NAME="PySide6_example Coverage Results" MODIFIED="1712306352057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test_visio_r1_py$PySide6_my_example_v2r0.coverage" NAME="PySide6_my_example_v2r0 Coverage Results" MODIFIED="1712572502089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PySide6" />
     <SUITE FILE_PATH="coverage/PyQt_my_example_v1r1_py$PySide6_my_example_v0r1.coverage" NAME="PySide6_my_example_v0r1 Coverage Results" MODIFIED="1712306333991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PyQt_my_example_v1r1_py$PyQt_my_example_v1r1.coverage" NAME="PyQt_my_example_v1r1 Coverage Results" MODIFIED="1712306319604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Flet_my_example_v1r1_py$all_any.coverage" NAME="all_any Coverage Results" MODIFIED="1714281455204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Flet_my_example_v1r1_py$decorator_v1.coverage" NAME="decorator_v1 Coverage Results" MODIFIED="1714311132162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Flet_my_example_v1r1_py$Flet_my_example_v1r1.coverage" NAME="Flet_my_example_v1r1 Coverage Results" MODIFIED="1714281166798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PyQt_my_example_v1r1_py$PySide2_example.coverage" NAME="PySide2_example Coverage Results" MODIFIED="1712295418776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PySide6_my_example_v2r0_py$test.coverage" NAME="test Coverage Results" MODIFIED="1712332989795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PySide6_my_example_v2r0_py$PyQt_my_example_v1r1.coverage" NAME="PyQt_my_example_v1r1 Coverage Results" MODIFIED="1712354455121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Flet_my_example_v1r1_py$PyQt_my_example_v1r1.coverage" NAME="PyQt_my_example_v1r1 Coverage Results" MODIFIED="1714281143894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Flet_my_example_v1r1_py$assert.coverage" NAME="assert Coverage Results" MODIFIED="1714281657564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Flet_my_example_v1r1_py$PyQt_my_example_v1r1.coverage" NAME="PyQt_my_example_v1r1 Coverage Results" MODIFIED="1714311113708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PySide6_my_example_v2r0_py$PySide6_my_example_v2r0.coverage" NAME="PySide6_my_example_v2r0 Coverage Results" MODIFIED="1712313117396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PySide6_my_example_v2r0_py$PySide6_DragDrop_v1r1.coverage" NAME="PySide6_DragDrop_v1r1 Coverage Results" MODIFIED="1712359199140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Flet_my_example_v1r1_py$class.coverage" NAME="class Coverage Results" MODIFIED="1714281702079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

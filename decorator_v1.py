@@ -1,4 +1,4 @@
-def my_shiny_new_decorator(function_to_decorate):
+def my_decorator(function_to_decorate):
     # Внутри себя декоратор определяет функцию-"обёртку". Она будет обёрнута вокруг декорируемой, функции
     # получая возможность исполнять произвольный код до и после неё.
     def wrapper():
@@ -9,9 +9,9 @@ def my_shiny_new_decorator(function_to_decorate):
     return wrapper
 
 
-@my_shiny_new_decorator
+@my_decorator
 def stand_alone_function():
-    print("Я простая одинокая функция, ты ведь не посмеешь меня изменять?")
+    print("  Я простая одинокая функция ?")
 
 
 stand_alone_function()
