@@ -1,6 +1,6 @@
 # pip install colorama
 import colorama
-from colorama import Fore
+from colorama import Fore, Style
 
 # Инициализация colorama для перехвата символов цвета в Windows
 colorama.init(autoreset=True)
@@ -20,6 +20,6 @@ print(Fore.MAGENTA + str(num))  # Выводим значение перемен
 print(Fore.LIGHTMAGENTA_EX + str(num))  # Выводим значение переменной сиреневым цветом
 
 print(Fore.YELLOW + str(num))  # Выводим значение переменной жёлтым цветом
-print(Fore.LIGHTYELLOW_EX + str(num))  # Выводим значение переменной светложёлтым цветом
+print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + str(num) + " bold")  # Выводим значение переменной светложёлтым цветом
 
 print("white hapy end")

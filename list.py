@@ -1,7 +1,6 @@
-my_list = []
+my_list = list()
 print(my_list)
 
-numbers = list()
 numbers = [1, 2, 3, 4, 5]
 print(numbers)
 
