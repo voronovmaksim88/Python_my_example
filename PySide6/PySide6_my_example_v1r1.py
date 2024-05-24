@@ -1,5 +1,6 @@
 from PySide6 import QtWidgets, QtCore
 
+
 class MyWindow(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
@@ -27,6 +28,7 @@ class MyWindow(QtWidgets.QWidget):
     def decrease(self):
         self.counter -= 1
         self.label.setText(str(self.counter))
+
 
 app = QtWidgets.QApplication([])
 win = MyWindow()

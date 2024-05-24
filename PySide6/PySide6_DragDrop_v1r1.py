@@ -2,6 +2,7 @@ from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QWidget, QPushB
 from PySide6.QtGui import QPainter, QBrush
 from PySide6.QtCore import Qt
 
+
 class Block(QLabel):
     last_square_number_AND = 0
     last_square_number_OR = 0
@@ -39,7 +40,7 @@ class Block(QLabel):
 
         # Вычисляем координаты для круга
         radius = 10  # Диаметр круга
-        x = 0-radius // 2  # Сдвигаем круг на половину его радиуса влево, чтобы он был посередине края
+        x = 0 - radius // 2  # Сдвигаем круг на половину его радиуса влево, чтобы он был посередине края
         y = (self.height() // 4) - (radius // 2)  # Позиционируем по вертикали посредине виджета
 
         # Рисуем круг с заданными параметрами
@@ -47,14 +48,13 @@ class Block(QLabel):
 
         # Вычисляем координаты для круга
         radius = 10  # Диаметр круга
-        x = 0-radius // 2  # Сдвигаем круг на половину его радиуса влево, чтобы он был посередине края
-        y = (self.height() // 4)*3 - (radius // 2)  # Позиционируем по вертикали посредине виджета
+        x = 0 - radius // 2  # Сдвигаем круг на половину его радиуса влево, чтобы он был посередине края
+        y = (self.height() // 4) * 3 - (radius // 2)  # Позиционируем по вертикали посредине виджета
 
         # Рисуем круг с заданными параметрами
         painter.drawEllipse(x, y, radius, radius)
 
         painter.end()  # Завершаем рисование
-
 
     def mousePressEvent(self, event):
         self.__mousePressPos = event.globalPosition().toPoint()
@@ -88,6 +88,7 @@ class BlockOR(Block):
         super().__init__(*args, **kwargs)
         self.setText("OR_" + str(BlockOR.last_square_number_OR))
 
+
 class BlockIN(Block):
     def __init__(self, *args, x=300, y=300, width=50, height=25, **kwargs):
         super().__init__(*args, **kwargs)
@@ -103,8 +104,6 @@ class BlockIN(Block):
             font-weight: bold; 
             qproperty-alignment: AlignCenter;
         """)
-
-
 
 
 class MainWindow(QMainWindow):
@@ -145,7 +144,6 @@ class MainWindow(QMainWindow):
         BlockAND(self.central_widget).show()
         # Увеличиваем счётчик в соответствующем классе
 
-
     def create_block_or(self):
         BlockOR.last_square_number_OR += 1
         BlockOR(self.central_widget).show()
@@ -155,8 +153,6 @@ class MainWindow(QMainWindow):
         BlockIN.last_square_number_IN += 1
         BlockIN(self.central_widget).show()
         # Увеличиваем счётчик в соответствующем классе
-
-
 
     def show_counts(self):
         # Обновляем текст метки с использованием текущих значений

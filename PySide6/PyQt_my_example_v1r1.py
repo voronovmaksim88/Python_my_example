@@ -9,6 +9,7 @@ count = 0
 def onClicBtn():
     print("hello")
 
+
 def my_test_app():
     # Создание объекта QApplication
     app = QApplication(sys.argv)

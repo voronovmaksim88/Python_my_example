@@ -1,7 +1,3 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-# https://pythonworld.ru/gui/pyqt5-firstprograms.html
-
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget
 
