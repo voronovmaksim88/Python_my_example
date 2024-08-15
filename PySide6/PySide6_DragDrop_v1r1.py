@@ -1,18 +1,19 @@
 from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QWidget, QPushButton, QVBoxLayout
 from PySide6.QtGui import QPainter, QBrush
 from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QMenu
+from PySide6.QtCore import Signal
 
 
 class Block(QLabel):
-    last_square_number_AND = 0
-    last_square_number_OR = 0
-    last_square_number_IN = 0
+    delete_requested = Signal(object)  # Сигнал, который будет вызван при удалении блока
 
-    def __init__(self, *args, x=300, y=300, width=50, height=50, **kwargs):
+    def __init__(self, *args, x=300, y=300, width=50, height=50, name=None, **kwargs):
         super().__init__(*args, **kwargs)
 
         # Передадим геометрию через аргументы метода super или последующий вызов setGeometry
         self.setGeometry(x, y, width, height)
+        self.name = name  # Добавляем атрибут name
 
         self.setStyleSheet("""
             background-color: black;
@@ -21,6 +22,11 @@ class Block(QLabel):
             font-weight: bold; 
             qproperty-alignment: AlignCenter;
         """)
+
+        # Инициализация атрибутов, связанных с перемещением
+        self.__mousePressPos = None
+        self.__mousePressWindowPos = None
+        self.__mouseMovePos = None
 
     def paintEvent(self, event):
         super().paintEvent(event)
@@ -62,12 +68,11 @@ class Block(QLabel):
         self.__mouseMovePos = event.globalPosition().toPoint() - self.pos()
 
     def mouseMoveEvent(self, event):
-        currPos = self.mapToParent(event.position().toPoint())
-        globalPos = event.globalPosition().toPoint()
-        diff = globalPos - self.__mouseMovePos
+        global_pos = event.globalPosition().toPoint()
+        diff = global_pos - self.__mouseMovePos
 
         self.move(diff)
-        self.__mouseMovePos = globalPos - self.pos()
+        self.__mouseMovePos = global_pos - self.pos()
 
     def mouseReleaseEvent(self, event):
         if self.__mousePressPos is not None:
@@ -76,27 +81,43 @@ class Block(QLabel):
                 event.ignore()
                 return
 
+    def contextMenuEvent(self, event):
+        context_menu = QMenu(self)
+        delete_action = context_menu.addAction(f"Удалить {self.name}")
+        action = context_menu.exec(self.mapToGlobal(event.pos()))
+        if action == delete_action:
+            self.delete_requested.emit(self)
+            self.deleteLater()
+
 
 class BlockAND(Block):
+    last_square_number_AND = 0
+
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.setText("AND_" + str(BlockAND.last_square_number_AND))
+        BlockAND.last_square_number_AND += 1
+        name = f"AND_{BlockAND.last_square_number_AND}"
+        super().__init__(*args, name=name, **kwargs)
+        self.setText(name)
 
 
 class BlockOR(Block):
+    last_square_number_OR = 0
+
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.setText("OR_" + str(BlockOR.last_square_number_OR))
+        BlockOR.last_square_number_OR += 1
+        name = f"OR_{BlockOR.last_square_number_OR}"
+        super().__init__(*args, name=name, **kwargs)
+        self.setText(name)
 
 
 class BlockIN(Block):
+    last_square_number_IN = 0
+
     def __init__(self, *args, x=300, y=300, width=50, height=25, **kwargs):
-        super().__init__(*args, **kwargs)
-        # Передадим геометрию через аргументы метода super или последующий вызов setGeometry
-        self.setGeometry(x, y, width, height)
-
-        self.setText("IN_" + str(BlockIN.last_square_number_IN))
-
+        BlockIN.last_square_number_IN += 1
+        name = f"IN_{BlockIN.last_square_number_IN}"
+        super().__init__(*args, x=x, y=y, width=width, height=height, name=name, **kwargs)
+        self.setText(name)
         self.setStyleSheet("""
             background-color: green;
             color: white;
@@ -109,6 +130,8 @@ class BlockIN(Block):
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.blocks = []
+
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
@@ -128,7 +151,7 @@ class MainWindow(QMainWindow):
 
         self.count_button = QPushButton("Показать количество")
         self.layout.addWidget(self.count_button)
-        self.count_button.clicked.connect(self.show_counts)
+        self.count_button.clicked.connect(self.update_counts)
 
         self.count_label_and = QLabel("AND: 0")
         self.layout.addWidget(self.count_label_and)
@@ -140,25 +163,36 @@ class MainWindow(QMainWindow):
         self.layout.addWidget(self.count_label_in)
 
     def create_block_and(self):
-        BlockAND.last_square_number_AND += 1
-        BlockAND(self.central_widget).show()
-        # Увеличиваем счётчик в соответствующем классе
+        block = BlockAND(self.central_widget)
+        block.show()
+        self.blocks.append(block)
+        block.delete_requested.connect(self.remove_block)  # Создаем слот, который будет вызываться при удалении блока
 
     def create_block_or(self):
-        BlockOR.last_square_number_OR += 1
-        BlockOR(self.central_widget).show()
-        # Увеличиваем счётчик в соответствующем классе
+        block = BlockOR(self.central_widget)
+        block.show()
+        self.blocks.append(block)
+        block.delete_requested.connect(self.remove_block)  # Создаем слот, который будет вызываться при удалении блока
 
     def create_block_in(self):
-        BlockIN.last_square_number_IN += 1
-        BlockIN(self.central_widget).show()
-        # Увеличиваем счётчик в соответствующем классе
+        block = BlockIN(self.central_widget)
+        block.show()
+        self.blocks.append(block)
+        block.delete_requested.connect(self.remove_block)  # Создаем слот, который будет вызываться при удалении блока
 
-    def show_counts(self):
-        # Обновляем текст метки с использованием текущих значений
-        self.count_label_and.setText(f"AND: {BlockAND.last_square_number_AND}")
-        self.count_label_or.setText(f"OR: {BlockOR.last_square_number_OR}")
-        self.count_label_in.setText(f"IN: {BlockIN.last_square_number_IN}")
+    def remove_block(self, block):
+        if block in self.blocks:
+            self.blocks.remove(block)
+        self.update_counts()
+
+    def update_counts(self):
+        and_count = sum(1 for block in self.blocks if isinstance(block, BlockAND))
+        or_count = sum(1 for block in self.blocks if isinstance(block, BlockOR))
+        in_count = sum(1 for block in self.blocks if isinstance(block, BlockIN))
+
+        self.count_label_and.setText(f"AND: {and_count}")
+        self.count_label_or.setText(f"OR: {or_count}")
+        self.count_label_in.setText(f"IN: {in_count}")
 
 
 if __name__ == '__main__':
