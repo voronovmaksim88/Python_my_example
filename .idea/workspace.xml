@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c12cb45-b5f3-4c76-a68a-fd5953bd1315" name="Changes" comment="Мелкие правочки" />
+    <list default="true" id="7c12cb45-b5f3-4c76-a68a-fd5953bd1315" name="Changes" comment="Мелкие правочки">
+      <change afterPath="$PROJECT_DIR$/task stepik 24456/1_identificator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +49,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.1_identificator.executor": "Run",
     "Python.Draw_line.executor": "Run",
     "Python.Flet_my_example_v1r1.executor": "Run",
     "Python.PyQt.executor": "Run",
@@ -316,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727432175878</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Мелкие правочки">
+      <option name="closed" value="true" />
+      <created>1727432467732</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727432467732</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
