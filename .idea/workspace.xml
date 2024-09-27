@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c12cb45-b5f3-4c76-a68a-fd5953bd1315" name="Changes" comment="Мелкие правки">
+    <list default="true" id="7c12cb45-b5f3-4c76-a68a-fd5953bd1315" name="Changes" comment="Мелкие правочки">
+      <change beforePath="$PROJECT_DIR$/.idea/Python_my_example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python_my_example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/map.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,63 +48,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Draw_line.executor": "Run",
-    "Python.Flet_my_example_v1r1.executor": "Run",
-    "Python.PyQt.executor": "Run",
-    "Python.PyQt_my_example_v1r1.executor": "Run",
-    "Python.PySide2_example.executor": "Run",
-    "Python.PySide6_DragDrop_v1r1.executor": "Run",
-    "Python.PySide6_example.executor": "Run",
-    "Python.PySide6_my_example_v0r1.executor": "Run",
-    "Python.PySide6_my_example_v1r1.executor": "Run",
-    "Python.PySide6_my_example_v2r0.executor": "Run",
-    "Python.SQLlite_test_v1r1.executor": "Run",
-    "Python.Zip.executor": "Run",
-    "Python.all_any.executor": "Run",
-    "Python.assert.executor": "Run",
-    "Python.class.executor": "Run",
-    "Python.colorama_r1.executor": "Run",
-    "Python.decorator_v1.executor": "Run",
-    "Python.decorator_v2.executor": "Run",
-    "Python.decrement_increment_r1.executor": "Run",
-    "Python.def_return_pass.executor": "Run",
-    "Python.draw_line_vektor.executor": "Run",
-    "Python.exel.executor": "Run",
-    "Python.for_in.executor": "Run",
-    "Python.get_python_version.executor": "Run",
-    "Python.len.executor": "Run",
-    "Python.longest_common_prefix.executor": "Run",
-    "Python.map.executor": "Run",
-    "Python.networkx matplotlib_r1.executor": "Run",
-    "Python.prime number_v7.executor": "Run",
-    "Python.prime number_v8.executor": "Run",
-    "Python.print.executor": "Run",
-    "Python.rich.executor": "Run",
-    "Python.rounding.executor": "Run",
-    "Python.table_in_terminal.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.text_color_rich.executor": "Run",
-    "Python.time_date_tkinter.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/MyProg_git/KIS3_v2r2/frontend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "proofread",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Draw_line.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Flet_my_example_v1r1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PyQt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PyQt_my_example_v1r1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PySide2_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PySide6_DragDrop_v1r1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PySide6_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PySide6_my_example_v0r1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PySide6_my_example_v1r1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PySide6_my_example_v2r0.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SQLlite_test_v1r1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Zip.executor&quot;: &quot;Run&quot;,
+    &quot;Python.all_any.executor&quot;: &quot;Run&quot;,
+    &quot;Python.assert.executor&quot;: &quot;Run&quot;,
+    &quot;Python.class.executor&quot;: &quot;Run&quot;,
+    &quot;Python.colorama_r1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.decorator_v1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.decorator_v2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.decrement_increment_r1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.def_return_pass.executor&quot;: &quot;Run&quot;,
+    &quot;Python.draw_line_vektor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.for_in.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_python_version.executor&quot;: &quot;Run&quot;,
+    &quot;Python.len.executor&quot;: &quot;Run&quot;,
+    &quot;Python.longest_common_prefix.executor&quot;: &quot;Run&quot;,
+    &quot;Python.networkx matplotlib_r1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prime number_v7.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prime number_v8.executor&quot;: &quot;Run&quot;,
+    &quot;Python.print.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rich.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rounding.executor&quot;: &quot;Run&quot;,
+    &quot;Python.table_in_terminal.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.text_color_rich.executor&quot;: &quot;Run&quot;,
+    &quot;Python.time_date_tkinter.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/MyProg_git/Python_my_example&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.assert">
     <configuration name="PyQt_my_example_v1r1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_my_example" />
@@ -295,15 +295,7 @@
       <option name="project" value="LOCAL" />
       <updated>1720704021217</updated>
     </task>
-    <task id="LOCAL-00008" summary="Мелкие правочки">
-      <option name="closed" value="true" />
-      <created>1727336372030</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1727336372030</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
