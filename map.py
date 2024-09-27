@@ -1,4 +1,4 @@
-# Мэппинг — это функция, которая применяет другую функцию к итерируемому объекту.
+# Маппинг — это функция, которая применяет другую функцию к итерируемому объекту.
 # map(function, iterable, *iterables)¶
 # Return an iterator that applies function to every item of iterable, yielding the results.
 # map возвращает итератор

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c12cb45-b5f3-4c76-a68a-fd5953bd1315" name="Changes" comment="Мелкие правочки">
-      <change beforePath="$PROJECT_DIR$/.idea/Python_my_example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python_my_example.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7c12cb45-b5f3-4c76-a68a-fd5953bd1315" name="Changes" comment="Мелкие правки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/map.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +75,7 @@
     "Python.get_python_version.executor": "Run",
     "Python.len.executor": "Run",
     "Python.longest_common_prefix.executor": "Run",
+    "Python.map.executor": "Run",
     "Python.networkx matplotlib_r1.executor": "Run",
     "Python.prime number_v7.executor": "Run",
     "Python.prime number_v8.executor": "Run",
@@ -91,7 +91,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/MyProg_git/Python_my_example",
+    "last_opened_file_path": "D:/MyProg_git/KIS3_v2r2/frontend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -295,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720704021217</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Мелкие правочки">
+      <option name="closed" value="true" />
+      <created>1727336372030</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727336372030</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
