@@ -1,4 +1,4 @@
-# example read  write file
+# Example read and  write file
 
 f = open('text.txt', 'r')  # open file
 print(f.read())  # read file
