@@ -20,4 +20,5 @@ def f():
 
 
 f()
-print(ok_status)  # NameError
+# print(ok_status)  # NameError
+ 
