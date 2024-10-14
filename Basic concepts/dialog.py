@@ -23,6 +23,3 @@ while answer != "0":
     else:
         print("не понял ответ")
     print("")
-
-
-

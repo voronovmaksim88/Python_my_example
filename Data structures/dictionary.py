@@ -30,3 +30,6 @@ if "maksim" in dict_contact.values():  # а вот таким найдётся
 dict_contact.update({"name": "Ivan"})
 dict_contact["age"] = 44  # то же обновление значения словаря
 print(dict_contact)  # вывод словаря
+
+dict_contact = {"1": 2, 3: "4"}
+print(dict_contact)  # => {'1': 2, 3: '4'}
