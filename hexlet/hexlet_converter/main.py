@@ -13,4 +13,4 @@ user_amount = float(input('Введите сумму: '))
 conversion_currency = input('Введите конвертную валюту: ')
 
 result = user_amount * convert_currency(conversion_currency, user_currency)
-print(result)
+print(round(result, 2))

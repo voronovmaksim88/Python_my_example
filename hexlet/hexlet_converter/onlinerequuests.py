@@ -12,7 +12,7 @@ def convert_currency(from_currency, to_currency):
     currency = data_info.get('data', None)
     val = currency.get(from_currency, None)
     print(f'Курс {from_currency} в {to_currency} равен {val}')
-    return round(val, 2)
+    return val
 
 
 print(convert_currency(from_currency='RUB', to_currency='EUR'))
