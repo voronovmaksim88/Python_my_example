@@ -1,5 +1,4 @@
 import requests
-from pprint import pprint
 
 API_KEY = 'fca_live_DUxLeYRJST6PJ3mhyQPhM3gZVAbeEz5c8qaVHRC3'
 
