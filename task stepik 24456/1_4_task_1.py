@@ -96,13 +96,13 @@ foo
 
 
 # организуем словарь для хранения пространств имен
-# ключ - это имя пространсва имён
+# ключ - это имя пространства имён
 # значение - это список всех переменных, объявленных в данном пространстве имен
 
 def create(data, new_name_spase, parent_name_space):
     """
-    функция принимает на вход наш словарь и команду
-    Далее она находит то пространство имён(ключ) в которое надо добавить новое пространсво имён
+    Функция принимает на вход наш словарь и команду
+    Далее она находит то пространство имён(ключ) в которое надо добавить новое пространство имён
     и добавляет
     """
 
@@ -119,7 +119,7 @@ def create(data, new_name_spase, parent_name_space):
 
 def add(data, name_spase, var):
     """
-    функция принимает на вход наш словар, имя пространства имён и и имя переменной
+    Функция принимает на вход наш словарь, имя пространства имён и и имя переменной
     """
 
     if isinstance(data, dict):  # Если текущий элемент - словарь
@@ -135,8 +135,8 @@ def add(data, name_spase, var):
 
 def get(data, name_spase, var):
     """
-        функция принимает на вход наш словарь, имя пространства имён и имя переменной,
-        для которой надо вернуть имя того пространсва имён из которого она будет взята
+        Функция принимает на вход наш словарь, имя пространства имён и имя переменной.
+        Для переменной надо вернуть имя того пространства имён из которого она будет взята
         или вернуть None если такого пространства не существует
     """
 
@@ -148,7 +148,7 @@ def get(data, name_spase, var):
     elif isinstance(data, list):  # Если текущий элемент - список
         for i in range(len(data)):
             if data[i] == var:
-                return "varible " + data[i] + " was finded in namespase " + name_spase
+                return "variable " + data[i] + " was found in namespace " + name_spase
             if isinstance(data[i], dict):
                 return get(data[i], name_spase, var)  # Рекурсивный вызов для каждого элемента списка
             if i == len(data)-1:
@@ -156,7 +156,7 @@ def get(data, name_spase, var):
 
     # elif isinstance(data, str):  # Если текущий элемент - список
     #     if data == var:
-    #         return "varible " + data + " was finded in namespase " + name_spase
+    #         return "variable " + data + " was found in namespace " + name_spase
     #     else:
     #         return None
 
@@ -197,19 +197,19 @@ print(name_space_dict)
 
 # request_qty = int(input())
 # for i in range(request_qty):
-#     comand, arg1, arg2 = input().split()
-#     if comand == "add":
+#     command, arg1, arg2 = input().split()
+#     if command == "add":
 #         # arg1 - это имя пространства имён
 #         name_space_dict[arg1].append(arg2)
 #
-#     if comand == "create":
+#     if command == "create":
 #         # arg1 - Это имя пространства имён, которое надо создать.
 #         # arg2 - Это имя пространства, внутри которого надо создать.
 #         for name_space in name_space_dict:
 #             if name_space == arg2:
 #                 name_space_dict[name_space].append({arg1: []})
 #
-#     if comand == "get":
+#     if command == "get":
 #         print(name_space_dict[arg2])
 #
 # print(name_space_dict)
