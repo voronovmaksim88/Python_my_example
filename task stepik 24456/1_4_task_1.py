@@ -165,32 +165,21 @@ def get(data, name_spase, var):
 # name_space_dict = {'global': [{'foo': [{'f2': []}, {'f3': []}]}, {'foo1': []}]}
 name_space_dict = {'global': []}
 
-# create(name_space_dict, 'a', 'global')
-# create(name_space_dict, 'b', 'a')
-# add(name_space_dict, 'b', 'c')
-
-add(name_space_dict, 'global', 'var1')
-add(name_space_dict, 'global', 'var2')
-add(name_space_dict, 'global', 'var3')
-
-# print(get(name_space_dict, 'global', 'var1'))
-# print(get(name_space_dict, 'global', 'var2'))
-# print(get(name_space_dict, 'global', 'var3'))
-# print(get(name_space_dict, 'global', 'var4'))
-# print()
+add(name_space_dict, 'global', 'var01')
+add(name_space_dict, 'global', 'var02')
+add(name_space_dict, 'global', 'var03')
 
 create(name_space_dict, 'ns1', 'global')
-add(name_space_dict, 'global', 'var4')
-add(name_space_dict, 'ns1', 'var2')
-print(get(name_space_dict, 'ns1', 'var2'))
-print()
+add(name_space_dict, 'global', 'var04')
+add(name_space_dict, 'ns1', 'var10')
+add(name_space_dict, 'ns1', 'var11')
 
-# add(name_space_dict, 'global', 'var3')
-# get(name_space_dict, 'ns1', 'var3')
-#
-# get(name_space_dict, 'ns1', 'var3')
-#
-# get(name_space_dict, 'global', 'var2')
+create(name_space_dict, 'ns2', 'ns1')
+add(name_space_dict, 'ns2', 'var20')
+add(name_space_dict, 'ns2', 'var21')
+
+print(get(name_space_dict, 'ns1', 'var12'))
+print()
 
 print(name_space_dict)
 
@@ -227,10 +216,16 @@ print(name_space_dict)
 # example = {"G": [{"f": [{"f1": []}]}]}
 # print_keys(example)
 
-def print_name_space(name_space_dict_in: dict):
-    for item in name_space_dict_in['global']:
-        if type(item) == str:
-            print(item)
+
+def print_name_space(name_space_dict_in: dict, tab=""):
+    name = list(name_space_dict_in.keys())[0]
+    for item in name_space_dict_in[name]:
+        if type(item) is str:
+            print(tab + item)
+    for item in name_space_dict_in[name]:
+        if type(item) is dict:
+            print(f"{tab}def {list(item.keys())[0]}():")
+            print_name_space(item, tab + "  ")
 
 
 print_name_space(name_space_dict)
