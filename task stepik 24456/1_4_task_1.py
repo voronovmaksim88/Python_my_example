@@ -124,7 +124,7 @@ def add(data, name_spase, var):
 
     if isinstance(data, dict):  # Если текущий элемент - словарь
         for key, value in data.items():
-            #print(key)  # Выводим ключ
+            # print(key)  # Выводим ключ
             if key == name_spase:
                 data[key].append(var)
             add(value, name_spase, var)  # Рекурсивный вызов для значения
@@ -151,7 +151,7 @@ def get(data, name_spase, var):
                 return "variable " + data[i] + " was found in namespace " + name_spase
             if isinstance(data[i], dict):
                 return get(data[i], name_spase, var)  # Рекурсивный вызов для каждого элемента списка
-            if i == len(data)-1:
+            if i == len(data) - 1:
                 return None
 
     # elif isinstance(data, str):  # Если текущий элемент - список
@@ -159,8 +159,6 @@ def get(data, name_spase, var):
     #         return "variable " + data + " was found in namespace " + name_spase
     #     else:
     #         return None
-
-
 
 
 # словарь для хранения пространств имен
@@ -182,6 +180,7 @@ add(name_space_dict, 'global', 'var3')
 # print()
 
 create(name_space_dict, 'ns1', 'global')
+add(name_space_dict, 'global', 'var4')
 add(name_space_dict, 'ns1', 'var2')
 print(get(name_space_dict, 'ns1', 'var2'))
 print()
@@ -194,6 +193,7 @@ print()
 # get(name_space_dict, 'global', 'var2')
 
 print(name_space_dict)
+
 
 # request_qty = int(input())
 # for i in range(request_qty):
@@ -226,3 +226,11 @@ print(name_space_dict)
 # # Пример использования
 # example = {"G": [{"f": [{"f1": []}]}]}
 # print_keys(example)
+
+def print_name_space(name_space_dict_in: dict):
+    for item in name_space_dict_in['global']:
+        if type(item) == str:
+            print(item)
+
+
+print_name_space(name_space_dict)
