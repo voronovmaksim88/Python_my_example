@@ -235,3 +235,46 @@ def print_name_space(name_space_dict_in: dict, tab="", i=0):
 
 
 print_name_space(name_space_dict)
+
+
+def search_in_list(lst: list, var_name: str, current_ns: str):
+    """
+    Эта функция проеяет есть ли переменная в namespace
+    """
+    for item in lst:
+        if item == var_name:
+            return f"variable {item} was found in namespace: {current_ns}"
+    return None
+
+
+def build_name_space_pass(data: dict, ns: str, lst: list):
+    """
+    return list - pass to namespace
+    """
+
+    def search_in_list(lst, current_ns):
+        for item in lst:
+            if isinstance(item, dict):
+                result = search_in_dict(item)
+                if result:
+                    return result
+        return None
+
+    def search_in_dict(d):
+        for key, value in d.items():
+            if key == ns:
+                lst.append(key)
+            if isinstance(value, list):
+                # print(f"ищем в namespace {key}")
+                result = search_in_list(value, key)
+                if result:
+                    return result
+        return None
+
+    ...
+
+
+print(search_in_list(name_space_dict["global"], "v_01", "global"))
+
+
+
