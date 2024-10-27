@@ -182,6 +182,8 @@ create(name_space_dict, 'ns2', 'ns1')
 add(name_space_dict, 'ns2', 'v_20')
 add(name_space_dict, 'ns2', 'v_21')
 
+create(name_space_dict, 'ns3', 'ns2')
+
 print("get result:", get(name_space_dict, 'global', 'v_20', "global"))
 print()
 
@@ -247,34 +249,35 @@ def search_in_list(lst: list, var_name: str, current_ns: str):
     return None
 
 
-def build_name_space_pass(data: dict, ns: str, lst: list):
-    """
-    return list - pass to namespace
-    """
+def create_pass_name_space(data: dict, ns: str) -> list:
+    def find_path(current_data, current_path):
+        # Если текущий элемент словарь
+        if isinstance(current_data, dict):
+            # Перебираем ключи и значения словаря
+            for key, value in current_data.items():
+                # Если нашли искомое пространство имен
+                if key == ns:
+                    return current_path + [key]
+                # Рекурсивно ищем в значении словаря
+                path = find_path(value, current_path + [key])
+                if path:
+                    return path
 
-    def search_in_list(lst, current_ns):
-        for item in lst:
-            if isinstance(item, dict):
-                result = search_in_dict(item)
-                if result:
-                    return result
+        # Если текущий элемент список
+        elif isinstance(current_data, list):
+            # Перебираем элементы списка
+            for item in current_data:
+                # Рекурсивно ищем в каждом элементе
+                path = find_path(item, current_path)
+                if path:
+                    return path
+
         return None
 
-    def search_in_dict(d):
-        for key, value in d.items():
-            if key == ns:
-                lst.append(key)
-            if isinstance(value, list):
-                # print(f"ищем в namespace {key}")
-                result = search_in_list(value, key)
-                if result:
-                    return result
-        return None
-
-    ...
+    # Начинаем поиск с корневого словаря
+    result = find_path(data, [])
+    return result if result else []
 
 
 print(search_in_list(name_space_dict["global"], "v_01", "global"))
-
-
-
+print('путь', create_pass_name_space(name_space_dict, "ns3"))
