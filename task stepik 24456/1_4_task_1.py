@@ -119,7 +119,7 @@ def create(data, new_name_spase, parent_name_space):
 
 def add(data, name_spase, var):
     """
-    Функция принимает на вход наш словарь, имя пространства имён и и имя переменной
+    Функция принимает на вход наш словарь, имя пространства имён и имя переменной
     """
 
     if isinstance(data, dict):  # Если текущий элемент - словарь
@@ -133,32 +133,36 @@ def add(data, name_spase, var):
             add(item, name_spase, var)  # Рекурсивный вызов для каждого элемента списка
 
 
-def get(data, name_spase, var):
-    """
-        Функция принимает на вход наш словарь, имя пространства имён и имя переменной.
-        Для переменной надо вернуть имя того пространства имён из которого она будет взята
-        или вернуть None если такого пространства не существует
-    """
+def get(data: dict,
+        name_space_fix: str,
+        var_name: str,
+        name_space: str) -> str:
+    def search_in_list(lst, current_ns):
+        for item in lst:
+            if item == var_name:
+                return f"variable {item} was found in namespace: {current_ns}"
+            if isinstance(item, dict):
+                result = search_in_dict(item)
+                if result:
+                    return result
+        return None
 
-    if isinstance(data, dict):  # Если текущий элемент - словарь
-        for key, value in data.items():
-            name_spase = key
-            return get(value, name_spase, var)  # Рекурсивный вызов для значения
+    def search_in_dict(d):
+        for key, value in d.items():
+            # print(f"ищем в словаре {key}")
+            if isinstance(value, list):
+                # print(f"ищем в namespace {key}")
+                result = search_in_list(value, key)
+                if result:
+                    return result
+        return None
 
-    elif isinstance(data, list):  # Если текущий элемент - список
-        for i in range(len(data)):
-            if data[i] == var:
-                return "variable " + data[i] + " was found in namespace " + name_spase
-            if isinstance(data[i], dict):
-                return get(data[i], name_spase, var)  # Рекурсивный вызов для каждого элемента списка
-            if i == len(data) - 1:
-                return None
+    if isinstance(data, dict):
+        return search_in_dict(data)
+    elif isinstance(data, list):
+        return search_in_list(data, name_space)
 
-    # elif isinstance(data, str):  # Если текущий элемент - список
-    #     if data == var:
-    #         return "variable " + data + " was found in namespace " + name_spase
-    #     else:
-    #         return None
+    return "Variable not found"
 
 
 # словарь для хранения пространств имен
@@ -178,10 +182,11 @@ create(name_space_dict, 'ns2', 'ns1')
 add(name_space_dict, 'ns2', 'v_20')
 add(name_space_dict, 'ns2', 'v_21')
 
-print(get(name_space_dict, 'ns1', 'v_12'))
+print("get result:", get(name_space_dict, 'global', 'v_20', "global"))
 print()
 
 print(name_space_dict)
+print()
 
 
 # request_qty = int(input())
@@ -221,7 +226,7 @@ def print_name_space(name_space_dict_in: dict, tab="", i=0):
     name = list(name_space_dict_in.keys())[0]
     for item in name_space_dict_in[name]:
         if type(item) is str:
-            print(f"{tab} {item} = {i}")
+            print(f"{tab}{item} = {i}")
             i += 1
     for item in name_space_dict_in[name]:
         if type(item) is dict:
