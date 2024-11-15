@@ -10,7 +10,7 @@
 import time
 
 start_time = time.time()
-i = 200_000_000
+i = 10_000_000_000
 print("начинаем поиск простых чисел с ", i)
 stop = ''
 while True:
@@ -21,9 +21,9 @@ while True:
             break
         if j == i // 2:
             print(i, end=" ")
-            b = round((time.time() - start_time), 1)
-            print(b, "сек")
+            t = round((time.time() - start_time), 1)
+            print("потрачено", t, "сек")
             start_time = time.time()
-            stop = input("Введите Y  для завершения ")
+            # stop = input("Введите Y  для завершения ")
     #  print(i)
 # print("На поиск затрачено", b, "секунд")

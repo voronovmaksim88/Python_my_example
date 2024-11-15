@@ -11,8 +11,8 @@
 import time
 
 start_time = time.time()
-
-maximum = 10000000
+minimum = 0
+maximum = 100
 k = 0
 n = 0
 

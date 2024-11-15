@@ -6,13 +6,13 @@
 import time
 
 start_time = time.time()
-maximum = 10000
+maximum = 1_000_000
 print("число 2 простое")  # первое простое число, его не ищем
 for i in range(3, maximum+1):  # диапазон от 3 до maximum с шагом 1 по умолчанию
     for i1 in range(i // 2 + 1, 1, -1):
         # print(i, "%", i1, "=", i % i1, end='   ')
         if i % i1 == 0:
-            print("число", i, "не простое")
+            # print("число", i, "не простое")
             break
         if i1 == 2:
             print("число", i, "простое")
