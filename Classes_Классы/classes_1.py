@@ -19,11 +19,14 @@ print(C)
 
 
 class PLC:
-    def __init__(self, name, manufacturer):
+    def __init__(self, name, manufacturer):  # self - это экземпляр класса
+        """
+        __init__ никогда ничего не возвращает
+        """
         self.name = name
         self.manufacturer = manufacturer
 
-    def about(self):
+    def about(self):  # about - это метод класса
         print("name", self.name)
         print("manufacturer", self.manufacturer)
 
