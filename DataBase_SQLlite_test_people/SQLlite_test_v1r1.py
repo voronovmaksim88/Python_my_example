@@ -10,7 +10,7 @@ if create_new_table == 1:
     cursor.execute("""CREATE TABLE people
         (id INTEGER PRIMARY KEY AUTOINCREMENT,  
         name TEXT, 
-        age INTEGER
+        age INTEGER,
         gender INTEGER)
     """)
 
@@ -59,9 +59,8 @@ while True:  # бесконечный цикл разговора с польз�
     if answer == "n":
         new_name = input("enter new name ")
         new_age = input("enter new age ")
-        new_execute = "INSERT INTO people (name, age) VALUES ('" + new_name + "', " + new_age + ")"
-        print(new_execute)
-        cursor.execute(new_execute)
+        cursor.execute(
+            "INSERT INTO people (name, age) VALUES (?, ?)", (new_name, new_age))
         con.commit()
 
     print("\n")
