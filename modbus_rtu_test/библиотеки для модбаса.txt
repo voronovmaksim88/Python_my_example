@@ -1,0 +1,80 @@
+Вот список популярных Python-библиотек для работы с Modbus:
+
+1. pymodbus - одна из самых популярных библиотек
+from pymodbus.client import ModbusSerialClient
+client = ModbusSerialClient(port='COM1', baudrate=9600)
+result = client.read_holding_registers(address=0x0109, count=1, unit=1)
+
+
+2. umodbus - легковесная библиотека
+import serial
+from umodbus import conf
+from umodbus.client import serial as umodbus_serial
+
+serial_port = serial.Serial(port='COM1', baudrate=9600)
+message = umodbus_serial.read_holding_registers(slave_id=1, starting_address=0x0109, quantity=1)
+response = umodbus_serial.send_message(message, serial_port)
+
+
+3. modbus-tk - полнофункциональная библиотека
+import modbus_tk
+import modbus_tk.defines as cst
+from modbus_tk import modbus_rtu
+
+master = modbus_rtu.RtuMaster(serial.Serial(port='COM1', baudrate=9600))
+master.set_timeout(5.0)
+result = master.execute(1, cst.READ_HOLDING_REGISTERS, 0x0109, 1)
+
+
+4. easymodbus - простая в использовании библиотека
+from easymodbus.modbusClient import ModbusClient
+
+client = ModbusClient('COM1')
+client.baudrate = 9600
+client.connect()
+result = client.read_holdingregisters(0x0109, 1)
+
+
+5. MinimalModbus (которую мы уже обсуждали)
+import minimalmodbus
+instrument = minimalmodbus.Instrument('COM1', 1)
+value = instrument.read_register(0x0109)
+
+
+Особенности разных библиотек:
+
+pymodbus:
+- Самая популярная и активно поддерживаемая
+- Поддерживает TCP/IP и RTU
+- Хорошая документация
+- Может работать как клиент и сервер
+- Асинхронная поддержка
+
+umodbus:
+- Легковесная
+- Простой API
+- Поддерживает TCP и RTU
+- Хорошо подходит для встраиваемых систем
+
+modbus-tk:
+- Полный набор функций
+- Поддерживает симуляторы
+- Хорошая документация
+- Можно использовать как клиент и сервер
+
+easymodbus:
+- Очень простой в использовании
+- Базовая функциональность
+- Хорошо подходит для начинающих
+
+MinimalModbus:
+- Минималистичный и простой
+- Легко читаемый код
+- Ограниченная функциональность
+- Хорошо подходит для простых задач
+
+Выбор библиотеки зависит от ваших требований:
+- Для простых проектов: easymodbus или MinimalModbus
+- Для промышленных проектов: pymodbus или modbus-tk
+- Для встраиваемых систем: umodbus
+- Для асинхронной работы: pymodbus
