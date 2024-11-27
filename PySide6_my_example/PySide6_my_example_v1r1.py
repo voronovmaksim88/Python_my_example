@@ -1,5 +1,5 @@
-from PySide6 import QtWidgets, QtCore
 
+from PySide6 import QtWidgets, QtCore
 
 class MyWindow(QtWidgets.QWidget):
     def __init__(self):

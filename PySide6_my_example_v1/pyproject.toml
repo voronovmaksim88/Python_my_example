@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pyside6-my-example-v1"
+version = "0.1.0"
+description = ""
+authors = ["Maksim <voronovmaksim88@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+pyside6 = "6.8.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
