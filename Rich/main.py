@@ -65,3 +65,20 @@ markdown_example = """
 print("Hello, World!")
 """
 console.print(Markdown(markdown_example))
+
+
+# 7. Синтаксис подсветка
+code = """
+def fibonacci(n):
+if n <= 1:
+return n
+else:
+return fibonacci(n-1) + fibonacci(n-2)
+"""
+syntax = Syntax(code, "python", theme="monokai", line_numbers=True)
+console.print(syntax)
+
+
+# 8. Стили
+warning_style = Style(color="yellow", blink=True, bold=True)
+console.print("Внимание! Это важное сообщение!", style=warning_style)
