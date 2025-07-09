@@ -1,0 +1,13 @@
+2025-07-09 19:45:33.443 | INFO     | __main__:<module>:8 - Запуск приложения
+2025-07-09 19:45:33.443 | WARNING  | __main__:<module>:9 - Предупреждение: низкий уровень памяти
+2025-07-09 19:45:33.443 | ERROR    | __main__:<module>:10 - Произошла ошибка!
+2025-07-09 19:45:33.443 | CRITICAL | __main__:<module>:11 - Критическая ошибка! Приложение остановлено
+2025-07-09 19:45:33.443 | ERROR    | __main__:<module>:17 - Деление на ноль!
+Traceback (most recent call last):
+
+> File "D:\my_prog_git\Python_my_example\loguru\main.py", line 15, in <module>
+    1 / 0
+
+ZeroDivisionError: division by zero
+2025-07-09 19:45:33.444 | INFO     | __main__:process_data:21 - Обработка данных: 42
+2025-07-09 19:45:33.446 | SUCCESS  | __main__:<module>:25 - Результат: 84
