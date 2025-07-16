@@ -9,9 +9,15 @@
 
 
 def test_func(test_num: int):
-    if test_num > 0:
+    test_num=test_num * 2
+    print(test_num)
+
+    if test_num > 86:
+        return False
+    elif test_num == 86:
         return True
-    return False  # Явно возвращаем False для отрицательных чисел и нуля
+    else:
+        test_func(test_num)
 
 
 try:
