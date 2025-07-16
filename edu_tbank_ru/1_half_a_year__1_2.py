@@ -6,18 +6,23 @@
 Выберите все верные варианты ответа.
 7, 13, 17, 23, 43
 """
-
+def replace_num(i):
+    if i>99:
+        return i
+    else:
+        out = int(str(i)[0] + str(i)[1])
+        return out
 
 def test_func(test_num: int):
-    test_num=test_num * 2
+    test_1=test_num * 2
     print(test_num)
 
-    if test_num > 86:
+    if test_1 > 86:
         return False
-    elif test_num == 86:
+    elif test_1 == 86:
         return True
     else:
-        test_func(test_num)
+        test_func(test_1)
 
 
 try:
