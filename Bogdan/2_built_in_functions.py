@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+# Добавляем родительскую директорию в путь
+sys.path.append(str(Path(__file__).parent.parent))
+
 from test_math import pi
 
 num = pi
