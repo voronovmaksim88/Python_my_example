@@ -1,11 +1,7 @@
-import sys
-from pathlib import Path
-
-# Добавляем родительскую директорию в путь
-sys.path.append(str(Path(__file__).parent.parent))
-
 from test_math import pi
 
+# pip install test_math
+#
 num = pi
 print(pi)
 
@@ -43,11 +39,15 @@ print("hello, ", name)
 
 print("ваше имя для программы - это строка")
 print("строка - это объект класса str")
-print("И для этого объекта доступно", len(dir(name)), 'атрибутов')
+print("И для этого объекта доступно", len(dir(name)), "атрибутов")
 print("Вот их имена")
 # dir() - отображает имена всех атрибутов
 print(dir(name))
 print("Атрибут объекта называется методом если его значение это функция. ")
-print("Ваше имя если применить к нему метод upper будет", name.upper())  # применяем метод upper к строке name
+print(
+    "Ваше имя если применить к нему метод upper будет", name.upper()
+)  # применяем метод upper к строке name
 # при этом значение строки  name не изменилось
-print("ваше имя для программы - это 'экземпляр", name.__class__)  # применяем метод upper к строке name
+print(
+    "ваше имя для программы - это 'экземпляр", name.__class__
+)  # применяем метод upper к строке name
